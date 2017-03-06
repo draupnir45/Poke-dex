@@ -1,50 +1,47 @@
 //
 //  AppDelegate.m
-//  Pokédex
+//  TabNavAndView
 //
-//  Created by 박종찬 on 2017. 3. 6..
+//  Created by 박종찬 on 2017. 2. 21..
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "SettingData.h"
 
 @interface AppDelegate ()
+
+@property SettingData *settings;
 
 @end
 
 @implementation AppDelegate
 
 
+
+///저장되는 설정을 불러옵니다.
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.settings = [SettingData sharedSettings];
+    [self setTintChanged:self.settings.tintColorChanged];
+    
     return YES;
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-}
-
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    //어플리케이션이 종료되기 전에 설정을 저장해 줍니다.
+    [self.settings saveData];
 }
 
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+///틴트컬러를 설정에 따라 바꾸어 줍니다.
+- (void)setTintChanged:(BOOL)tintChanged {
+    if (tintChanged) [self.window setTintColor:[UIColor blueColor]];
+    else [self.window setTintColor:[UIColor redColor]];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadAppDelegateTable" object:nil];
+    self.settings.tintColorChanged = tintChanged;
 }
 
 
