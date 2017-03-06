@@ -202,6 +202,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="FFV-ld-BO6" kind="show" identifier="FavoritePokemonSegue" id="c3m-cl-OdB"/>
+                        <segue destination="dWb-Oy-q9N" kind="presentation" identifier="webViewSegue" id="AaA-X1-Q36"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c38-B8-J34" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -336,7 +337,8 @@
         <image name="star.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CSy-Vj-uc7"/>
         <segue reference="a0Z-sF-14f"/>
+        <segue reference="CSy-Vj-uc7"/>
+        <segue reference="AaA-X1-Q36"/>
     </inferredMetricsTieBreakers>
 </document>

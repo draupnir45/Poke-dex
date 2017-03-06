@@ -9,6 +9,7 @@
 #import "SettingViewController.h"
 #import "AppDelegate.h"
 #import "SettingData.h"
+#import "PokeWikiWebViewController.h"
 
 
 
@@ -47,7 +48,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,8 +56,11 @@
         case 0:
             return 2;
             break;
-        default:
+        case 1:
             return 1;
+            break;
+        default:
+            return 3;
             break;
     }
 }
@@ -64,7 +68,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseID"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseID"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"reuseID"];
     }
     
     switch (indexPath.section) {
@@ -81,13 +85,34 @@
                 [self.battleSixSwitch addTarget:self action:@selector(battleSix:) forControlEvents:UIControlEventValueChanged];
             }
             break;
-        default:
+        case 1: {
             cell.textLabel.text = @"틴트컬러 바꾸기";
             UISwitch *switchView = [[UISwitch alloc] init];
             cell.accessoryView = switchView;
             self.tintSwitch = switchView;
             [switchView addTarget:self action:@selector(tintColorChange:) forControlEvents:UIControlEventValueChanged];
             self.tintSwitch.on = self.settings.tintColorChanged;
+        }
+            break;
+            
+        default: {
+            switch (indexPath.row) {
+                case 0:
+                    cell.textLabel.text = @"CC-BY-SA 3.0";
+                    cell.detailTextLabel.text = @"동일조건변경허락";
+                    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                    break;
+                case 1:
+                    cell.textLabel.text = @"이미지 출처 - Nintendo";
+                    cell.detailTextLabel.text = @"collected by veekun";
+                    break;
+                default:
+                    cell.textLabel.text = @"도감 글 출처 - 포켓몬 위키";
+                    break;
+                }
+            }
+            
+            
             break;
     }
     
@@ -107,6 +132,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0 && indexPath.row == 0) {
         [self performSegueWithIdentifier:@"FavoritePokemonSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
+    } else if (indexPath.section == 2 && indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"webViewSegue" sender:self];
+        
     }
 }
 
@@ -116,8 +144,12 @@
             return @"즐겨찾기";
             break;
             
-        default:
+        case 1:
             return @"사용자 설정";
+            break;
+            
+        default:
+            return @"라이선스";
             break;
     }
 }
@@ -139,7 +171,6 @@
 
 
 - (void)battleSix:(UISwitch *)sender {
-    ////////////////////////이씀!!!
     if (self.settings.favoritePokemonIndexes.count > 6) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"이미 6마리 이상을 등록했습니다!"
                                                                        message:@"목록에서 해제하시겠어요?" preferredStyle:UIAlertControllerStyleAlert];
@@ -158,7 +189,7 @@
         [self.battleSixSwitch setOn:NO];
         [self presentViewController:alert animated:YES completion:nil];
     } else {
-    self.settings.battleSixEnabled = sender.on;//세이브
+    self.settings.battleSixEnabled = sender.on;
     }
     
 }
@@ -175,6 +206,20 @@
 
 - (IBAction)dismissAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"webViewSegue"]) {
+        UINavigationController *navi = segue.destinationViewController;
+        PokeWikiWebViewController *webView = (PokeWikiWebViewController *)navi.topViewController;
+        
+        NSString *urlString = @"https://creativecommons.org/licenses/by-sa/3.0/deed.ko";
+        webView.title = @"CC-BY-SA 3.0";
+        webView.urlString = urlString;
+        
+    }
+    
 }
 
 

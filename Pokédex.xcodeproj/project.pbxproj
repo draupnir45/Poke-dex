@@ -94,26 +94,8 @@
 			children = (
 				B90D2A5E1E6D88CE005302FE /* AppDelegate.h */,
 				B90D2A5F1E6D88CE005302FE /* AppDelegate.m */,
-				B90D2A711E6D8903005302FE /* DetailViewController.h */,
-				B90D2A721E6D8903005302FE /* DetailViewController.m */,
-				B90D2A731E6D8903005302FE /* TabBarController.h */,
-				B90D2A741E6D8903005302FE /* TabBarController.m */,
-				B90D2A751E6D8903005302FE /* Gen1ViewController.h */,
-				B90D2A761E6D8903005302FE /* Gen1ViewController.m */,
-				B90D2A771E6D8903005302FE /* Gen2ViewController.h */,
-				B90D2A781E6D8903005302FE /* Gen2ViewController.m */,
-				B90D2A791E6D8903005302FE /* PokemonTableViewCell.h */,
-				B90D2A7A1E6D8903005302FE /* PokemonTableViewCell.m */,
-				B90D2A7B1E6D8903005302FE /* PokeWikiWebViewController.h */,
-				B90D2A7C1E6D8903005302FE /* PokeWikiWebViewController.m */,
-				B90D2A601E6D88CE005302FE /* PokemonData.h */,
-				B90D2A611E6D88CE005302FE /* PokemonData.m */,
-				B90D2A621E6D88CE005302FE /* SettingData.h */,
-				B90D2A631E6D88CE005302FE /* SettingData.m */,
-				B90D2A831E6D890E005302FE /* SettingViewController.h */,
-				B90D2A841E6D890E005302FE /* SettingViewController.m */,
-				B90D2A851E6D890E005302FE /* FavoritePMViewController.h */,
-				B90D2A861E6D890E005302FE /* FavoritePMViewController.m */,
+				B9EEF81F1E6D8FCC0048781A /* UI */,
+				B9EEF8201E6D8FD40048781A /* Data */,
 				B90D2A641E6D88CE005302FE /* Main.storyboard */,
 				B90D2A651E6D88CE005302FE /* LaunchScreen.storyboard */,
 				B90D2A661E6D88CE005302FE /* images */,
@@ -131,6 +113,40 @@
 				B90D2A481E6D8884005302FE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9EEF81F1E6D8FCC0048781A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B90D2A711E6D8903005302FE /* DetailViewController.h */,
+				B90D2A721E6D8903005302FE /* DetailViewController.m */,
+				B90D2A731E6D8903005302FE /* TabBarController.h */,
+				B90D2A741E6D8903005302FE /* TabBarController.m */,
+				B90D2A751E6D8903005302FE /* Gen1ViewController.h */,
+				B90D2A761E6D8903005302FE /* Gen1ViewController.m */,
+				B90D2A771E6D8903005302FE /* Gen2ViewController.h */,
+				B90D2A781E6D8903005302FE /* Gen2ViewController.m */,
+				B90D2A791E6D8903005302FE /* PokemonTableViewCell.h */,
+				B90D2A7A1E6D8903005302FE /* PokemonTableViewCell.m */,
+				B90D2A7B1E6D8903005302FE /* PokeWikiWebViewController.h */,
+				B90D2A7C1E6D8903005302FE /* PokeWikiWebViewController.m */,
+				B90D2A831E6D890E005302FE /* SettingViewController.h */,
+				B90D2A841E6D890E005302FE /* SettingViewController.m */,
+				B90D2A851E6D890E005302FE /* FavoritePMViewController.h */,
+				B90D2A861E6D890E005302FE /* FavoritePMViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B9EEF8201E6D8FD40048781A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B90D2A601E6D88CE005302FE /* PokemonData.h */,
+				B90D2A611E6D88CE005302FE /* PokemonData.m */,
+				B90D2A621E6D88CE005302FE /* SettingData.h */,
+				B90D2A631E6D88CE005302FE /* SettingData.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +373,7 @@
 				B90D2A5D1E6D8884005302FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
