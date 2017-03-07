@@ -29,8 +29,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokédex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQp-8A-L6M">
-                                <rect key="frame" x="90" y="486" width="235" height="76"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="63"/>
+                                <rect key="frame" x="89.666666666666686" y="486" width="235" height="79"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="66"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

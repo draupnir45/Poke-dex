@@ -57,6 +57,7 @@
 }
 
 
+
 -(void)viewDidAppear:(BOOL)animated {
     //설명 읽어주기
     [self speakDescription];
