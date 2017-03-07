@@ -72,8 +72,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PokemonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
-    if (cell != nil) {
-    } else {
+    if (cell == nil) {
         cell = [[PokemonTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
     }
     

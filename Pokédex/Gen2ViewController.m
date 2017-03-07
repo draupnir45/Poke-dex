@@ -66,9 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PokemonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
-    if (cell != nil) {
-//        cell.numberLabel.textColor = self.view.tintColor;//설정에서 틴트컬러 변경시 리유저블 셀의 틴트컬러를 컨트롤
-    } else {
+    if (cell == nil) {
         cell = [[PokemonTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
     }
     

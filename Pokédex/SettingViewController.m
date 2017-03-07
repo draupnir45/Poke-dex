@@ -56,9 +56,6 @@
         case 0:
             return 2;
             break;
-//        case 1:
-//            return 1;
-//            break;
         default:
             return 3;
             break;
@@ -85,15 +82,6 @@
                 [self.battleSixSwitch addTarget:self action:@selector(battleSix:) forControlEvents:UIControlEventValueChanged];
             }
             break;
-//        case 1: {
-//            cell.textLabel.text = @"틴트컬러 바꾸기";
-//            UISwitch *switchView = [[UISwitch alloc] init];
-//            cell.accessoryView = switchView;
-//            self.tintSwitch = switchView;
-//            [switchView addTarget:self action:@selector(tintColorChange:) forControlEvents:UIControlEventValueChanged];
-//            self.tintSwitch.on = self.settings.tintColorChanged;
-//        }
-//            break;
             
         default: {
             switch (indexPath.row) {
@@ -143,10 +131,6 @@
         case 0:
             return @"즐겨찾기";
             break;
-//            
-//        case 1:
-//            return @"사용자 설정";
-//            break;
             
         default:
             return @"라이선스";
@@ -193,14 +177,6 @@
     }
     
 }
-
-//
-//- (void)tintColorChange:(UISwitch *)sender {
-//    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//    [appDelegate setTintChanged:sender.on];
-//
-//}
-
 
 #pragma mark - Navigation
 
