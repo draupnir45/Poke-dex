@@ -25,6 +25,7 @@
 		B90D2A871E6D890E005302FE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90D2A841E6D890E005302FE /* SettingViewController.m */; };
 		B90D2A881E6D890E005302FE /* FavoritePMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90D2A861E6D890E005302FE /* FavoritePMViewController.m */; };
 		B90D2A8A1E6D891D005302FE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B90D2A891E6D891D005302FE /* Default-568h@2x.png */; };
+		B9F8E57E1E6EC80C00116B53 /* PokeDexNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8E57D1E6EC80C00116B53 /* PokeDexNaviController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		B90D2A861E6D890E005302FE /* FavoritePMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePMViewController.m; sourceTree = "<group>"; };
 		B90D2A891E6D891D005302FE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B90D2A8B1E6D894D005302FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9F8E57C1E6EC80C00116B53 /* PokeDexNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokeDexNaviController.h; sourceTree = "<group>"; };
+		B9F8E57D1E6EC80C00116B53 /* PokeDexNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokeDexNaviController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		B9EEF81F1E6D8FCC0048781A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B9F8E57C1E6EC80C00116B53 /* PokeDexNaviController.h */,
+				B9F8E57D1E6EC80C00116B53 /* PokeDexNaviController.m */,
 				B90D2A711E6D8903005302FE /* DetailViewController.h */,
 				B90D2A721E6D8903005302FE /* DetailViewController.m */,
 				B90D2A731E6D8903005302FE /* TabBarController.h */,
@@ -233,6 +238,7 @@
 				B90D2A491E6D8884005302FE /* main.m in Sources */,
 				B90D2A821E6D8903005302FE /* PokeWikiWebViewController.m in Sources */,
 				B90D2A811E6D8903005302FE /* PokemonTableViewCell.m in Sources */,
+				B9F8E57E1E6EC80C00116B53 /* PokeDexNaviController.m in Sources */,
 				B90D2A7F1E6D8903005302FE /* Gen1ViewController.m in Sources */,
 				B90D2A871E6D890E005302FE /* SettingViewController.m in Sources */,
 				B90D2A6A1E6D88CE005302FE /* PokemonData.m in Sources */,

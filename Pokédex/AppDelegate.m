@@ -23,7 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.settings = [SettingData sharedSettings];
-    [self setTintChanged:self.settings.tintColorChanged];
+    [self.window setTintColor:[UIColor redColor]];
+//    [self setTintChanged:self.settings.tintColorChanged];
     
     return YES;
 }
@@ -35,14 +36,14 @@
     [self.settings saveData];
 }
 
-///틴트컬러를 설정에 따라 바꾸어 줍니다.
-- (void)setTintChanged:(BOOL)tintChanged {
-    if (tintChanged) [self.window setTintColor:[UIColor blueColor]];
-    else [self.window setTintColor:[UIColor redColor]];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadAppDelegateTable" object:nil];
-    self.settings.tintColorChanged = tintChanged;
-}
+/////틴트컬러를 설정에 따라 바꾸어 줍니다.
+//- (void)setTintChanged:(BOOL)tintChanged {
+//    if (tintChanged) [self.window setTintColor:[UIColor blueColor]];
+//    else [self.window setTintColor:[UIColor redColor]];
+//    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadAppDelegateTable" object:nil];
+//    self.settings.tintColorChanged = tintChanged;
+//}
 
 
 @end

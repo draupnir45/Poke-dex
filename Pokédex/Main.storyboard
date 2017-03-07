@@ -260,7 +260,7 @@
         <!--Item-->
         <scene sceneID="SWo-ne-snO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="svN-xf-AAb" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="svN-xf-AAb" customClass="PokeDexNaviController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="JtU-1n-VgV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RSu-RU-PS4">
@@ -279,7 +279,7 @@
         <!--Item-->
         <scene sceneID="TTs-cf-3Q6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zms-OV-n01" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zms-OV-n01" customClass="PokeDexNaviController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Yy4-DO-INY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="htB-fk-9j6">
@@ -295,10 +295,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="901"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Poke Dex Navi Controller-->
         <scene sceneID="um0-VM-yxL">
             <objects>
-                <navigationController storyboardIdentifier="SettingNaviCon" automaticallyAdjustsScrollViewInsets="NO" id="yqm-eS-yWx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingNaviCon" automaticallyAdjustsScrollViewInsets="NO" id="yqm-eS-yWx" customClass="PokeDexNaviController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ron-pa-pXB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -313,10 +313,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="1673"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Poke Dex Navi Controller-->
         <scene sceneID="6ZG-wu-zIC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dWb-Oy-q9N" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dWb-Oy-q9N" customClass="PokeDexNaviController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xTZ-dd-IaU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (void)setTintChanged:(BOOL)tintChanged;
+//- (void)setTintChanged:(BOOL)tintChanged;
 
 @end
 
