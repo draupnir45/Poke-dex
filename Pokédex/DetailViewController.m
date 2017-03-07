@@ -52,12 +52,15 @@
     [self.descriptionView setText: self.sharedData.pokemonDescription[self.pokemonIndex]];
     
     
-    //설명 읽어주기
-    [self speakDescription];
+
     
 }
 
 
+-(void)viewDidAppear:(BOOL)animated {
+    //설명 읽어주기
+    [self speakDescription];
+}
 
 -(void)viewWillDisappear:(BOOL)animated {
     //뷰가 바뀔 때 설명 읽어주기를 멈춘다.
@@ -154,7 +157,8 @@
 #pragma mark - Speech
 
 - (void)speakDescription {
-    AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.descriptionView.text];
+    NSString *speechText = [NSString stringWithFormat:@"%@. . . . \n %@",self.title, self.descriptionView.text];
+    AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:speechText];
     AVSpeechSynthesizer *speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
     
     [speechSynthesizer speakUtterance:utterance];
