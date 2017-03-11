@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SettingData.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -24,6 +25,12 @@
     
     self.settings = [SettingData sharedSettings];
     [self.window setTintColor:[UIColor redColor]];
+    
+    AVSpeechSynthesizer *speechSynthesizer = [[AVSpeechSynthesizer alloc] init]; //퍼포먼스를 위해 신서사이저를 만들고, 혹시 스피치 중이면 중단시킨다.
+    
+    if (speechSynthesizer.isSpeaking) {
+        [speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    }
     
     return YES;
 }
