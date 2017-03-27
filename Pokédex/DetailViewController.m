@@ -32,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [UIDevice currentDevice]
+    
     //데이터 가져오기
     self.sharedData = [PokemonData sharedData];
     self.settings = [SettingData sharedSettings];

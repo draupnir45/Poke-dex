@@ -60,6 +60,7 @@
 		B90D2A861E6D890E005302FE /* FavoritePMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePMViewController.m; sourceTree = "<group>"; };
 		B90D2A891E6D891D005302FE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B90D2A8B1E6D894D005302FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B91EF7371E84E0DC00AB9979 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		B9F8E57C1E6EC80C00116B53 /* PokeDexNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokeDexNaviController.h; sourceTree = "<group>"; };
 		B9F8E57D1E6EC80C00116B53 /* PokeDexNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokeDexNaviController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +96,7 @@
 		B90D2A461E6D8884005302FE /* Pokédex */ = {
 			isa = PBXGroup;
 			children = (
+				B91EF7371E84E0DC00AB9979 /* Prefix.pch */,
 				B90D2A5E1E6D88CE005302FE /* AppDelegate.h */,
 				B90D2A5F1E6D88CE005302FE /* AppDelegate.m */,
 				B9EEF81F1E6D8FCC0048781A /* UI */,
@@ -341,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8KDMCH8V2F;
+				GCC_PREFIX_HEADER = "Pokédex/Prefix.pch";
 				INFOPLIST_FILE = "Pokédex/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -354,6 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8KDMCH8V2F;
+				GCC_PREFIX_HEADER = "Pokédex/Prefix.pch";
 				INFOPLIST_FILE = "Pokédex/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

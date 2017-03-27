@@ -1,0 +1,16 @@
+//
+//  Prefix.pch
+//  Pokédex
+//
+//  Created by 박종찬 on 2017. 3. 24..
+//  Copyright © 2017년 Jongchan Park. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+#import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
+#import "PokemonData.h"
+
+#endif /* Prefix_pch */
